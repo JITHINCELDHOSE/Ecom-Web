@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+
+    <!-- Breadcrumb Start -->
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-light mb-30">
+                    <a class="breadcrumb-item text-dark" href="#">Home</a>
+                    <span class="breadcrumb-item active">Contact</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Login Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-1">
+            <div class="text-center mb-3 pb-3">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Sign in</h4>
+<!--                <h5>Your Personal Details</h5>-->
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="contact-form bg-white" style="padding: 30px;">
+                        <div id="success"></div>
+                            <form action="login" method="post">
+                                {% csrf_token %}
+<!--                                <div class="control-group col-sm-12">-->
+<!--                                    <label class="control-label">Title </label>-->
+<!--                                    <div class="controls">-->
+<!--                                        <select class="span1" name="days">-->
+<!--                                            <option value="">-</option>-->
+<!--                                            <option value="1">Mr.</option>-->
+<!--                                            <option value="2">Mrs</option>>-->
+<!--                                            <option value="3">Miss</option>-->
+<!--                                        </select>-->
+<!--                                        <p></p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="control-group col-sm-12">-->
+<!--                                    <label class="control-label">First Name <sup>*</sup></label>-->
+<!--                                    <input type="text" class="form-control p-4" id="firstname" placeholder="First Name"-->
+<!--                                        required="required" data-validation-required-message="Please enter your first name" />-->
+<!--                                    <p class="help-block text-danger"></p>-->
+<!--                                </div>-->
+<!--                                <div class="control-group col-sm-12">-->
+<!--                                    <label class="control-label">Last Name <sup>*</sup></label>-->
+<!--                                    <input type="text" class="form-control p-4" id="lastname" placeholder="Last Name"-->
+<!--                                        required="required" data-validation-required-message="Please enter your last name" />-->
+<!--                                    <p class="help-block text-danger"></p>-->
+<!--                                </div>-->
+                                <div class="control-group col-sm-12">
+                                    <label class="control-label">User Name <sup>*</sup></label>
+                                    <input type="text" class="form-control p-4" name="username" placeholder="User Name"
+                                        required="required" data-validation-required-message="Please enter your user name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+<!--                                <div class="control-group col-sm-12">-->
+<!--                                    <label class="control-label">Your Email <sup>*</sup></label>-->
+<!--                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"-->
+<!--                                        required="required" data-validation-required-message="Please enter your email" />-->
+<!--                                    <p class="help-block text-danger"></p>-->
+<!--                                </div>-->
+                                <div class="control-group col-sm-12">
+                                    <label class="control-label">Your Password <sup>*</sup></label>
+                                    <input type="password" class="form-control p-4" name="password1" placeholder="Your Password"
+                                        required="required" data-validation-required-message="Please enter your password" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+<!--                                <div class="control-group col-sm-12">-->
+<!--                                    <label class="control-label">Re-type Password <sup>*</sup></label>-->
+<!--                                    <input type="password" class="form-control p-4" id="password2" placeholder="Confirm Your Password"-->
+<!--                                        required="required" data-validation-required-message="Please enter your password" />-->
+<!--                                    <p class="help-block text-danger"></p>-->
+<!--                                </div>-->
+<!--                                <div class="control-group col-sm-12">-->
+<!--                                    <label class="control-label">Your Address<sup>*</sup></label>-->
+<!--                                    <textarea class="form-control py-3 px-4" rows="5" id="address" placeholder="Address"-->
+<!--                                        required="required"-->
+<!--                                        data-validation-required-message="Please enter your address"></textarea>-->
+<!--                                    <p class="help-block text-danger"></p>-->
+<!--                                </div>-->
+<!--                                <div class="control-group col-sm-12">-->
+<!--                                    <input type="number" maxlength="6" class="form-control p-4" id="pin" placeholder="Your PIN"-->
+<!--                                        required="required" data-validation-required-message="Please enter your PIN" />-->
+<!--                                    <p class="help-block text-danger"></p>-->
+<!--                                </div>-->
+                        <br>
+                                <div class="text-center">
+                                    <button class="btn btn-primary py-1 px-2" type="submit" id="signup">SIGN IN</button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login End -->
+
+{% endblock %}
+</html>
